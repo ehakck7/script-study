@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>title</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<ul class="list">
+		<li>1번 일까요?</li>
+		<li>2번 일까요?</li>
+		<li>3번 일까요?</li>
+		<li>4번 일까요?</li>
+		<li>5번 일까요?</li>
+	</ul>
+</body>
+<script>
+	$(document).ready(function(){
+		$('.list li').each(function(index){
+			console.log(index)
+			$(this).addClass('li-0'+index);
+		})
+	})
+</script>
+</html>
