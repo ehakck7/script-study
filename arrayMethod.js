@@ -10,6 +10,7 @@ array.slice(-3, -1) // 3,4 음수면 끝에서 부터
 // splice(index, index부터 삭제 할 수(추가 할꺼면 0), 추가할 원소 ...)
 array.splice(2, 1) // [1, 2, 4, 5] slice랑 다르게 기존 배열에 영향을 줌
 console.log(array); // [1, 2, 4, 5] index[2]에서 부터 1개가 삭제됨
+console.log(array.splice(2, 1)[0]); // 배열로 반환되긴 때문에 [0]의 값을 꺼내줘야함
 
 array.splice(3, 0, 99, 99, 99); // index[3]부터 99,99,99 인자가 배열에 추가됨 
 console.log(array); // [1, 2, 4, 99, 99, 99, 5]
