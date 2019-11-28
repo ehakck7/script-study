@@ -26,7 +26,7 @@ baseBall.prototype.playGame = function(choiceNum){
 		let inputNum = prompt('숫자를 입력해주세요 4자리 (0~9 중복없이 입력해주세요)\nex) 1234, 4356')		
 		let inputList = inputNum.split('').map(Number)
 		count++
-		
+
 		// 입력값과 숫자 비교
 		for(let j = 0; j < 4; j++){
 			for(let k = 0; k < 4; k++){
@@ -40,19 +40,20 @@ baseBall.prototype.playGame = function(choiceNum){
 			}
 		}
 		
-		// 공격 횟수 체크
-		if(10-count > 0){
-			console.log('strike의 갯수는 ' + strike + '개 입니다')
-			console.log('ball의 갯수는 ' + ball + '개 입니다')
-			console.log('남은 공격 횟수는 ' + (10-count) + ' 개 입니다\n\n')
-		}else{
-			alert('GAME OVER\n정답은 '+ choiceNum.join('') + ' 입니다')
+		// 정답 체크
+		if(strike === 4){
+			alert(choiceNum.join('') + ' 정답 입니다!!!\n'+ count + ' 번 만에 맞췄습니다')
 			break;
 		}
 		
-		// 정답 체크
-		if(strike === 4){
-			alert(choiceNum.join('') + ' 정답 입니다!!!')
+		// 공격 횟수 체크
+		if(10-count > 0){
+			console.log('strike : ' + strike)
+			console.log('ball : ' + ball)
+			console.log('남은 공격 횟수 : ' + (10-count))
+			console.log('입력값 : ' + inputList.join('') +'\n\n')
+		}else{
+			alert('GAME OVER\n정답은 '+ choiceNum.join('') + ' 입니다')
 			break;
 		}
 	}
