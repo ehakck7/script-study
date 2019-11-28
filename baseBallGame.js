@@ -16,14 +16,42 @@ baseBall.prototype.randomNum = function(){
 
 // play함수
 baseBall.prototype.playGame = function(choiceNum){
+	const checkNum = /^[0-9]+$/;
 	let count = 0;
 	
 	// 공격 횟수가 총 10번
-	for(let i = 0; i < 10; i++){
-		// 공격이 한번 끝나면 초기화
+	while(count < 10){
 		let strike = 0;
 		let ball = 0;
-		let inputNum = prompt('숫자를 입력해주세요 4자리 (0~9 중복없이 입력해주세요)\nex) 1234, 4356')		
+		let inputNum = prompt('4자리 숫자를 입력해주세요 (0~9 중복없이 입력해주세요)\nex) 1234, 4356, 9501')
+	
+		// 입력값 검사
+		if(!checkNum.test(inputNum) && inputNum !== null){
+			alert('숫자만 입력해주세요!')
+			continue
+		}else if(inputNum === null){
+			alert('게임을 종료합니다')
+			break;
+		}else if(inputNum.length > 4){
+			alert('4자리 이하로 입력해주세요')
+			continue
+		}
+
+		// 중복값 체크
+		let overlap = []
+		for(let i = 0; i < inputNum.length; i++){
+			let value = inputNum[i]
+			if(overlap.indexOf(value) !== -1){
+				var breakPoint = 1
+				alert('중복 없이 입력하세요')
+				break;
+			}
+			overlap[i] = value
+		}
+		if(breakPoint === 1){
+			breakPoint = 0
+			continue
+		}
 		let inputList = inputNum.split('').map(Number)
 		count++
 
@@ -39,7 +67,7 @@ baseBall.prototype.playGame = function(choiceNum){
 				}
 			}
 		}
-		
+
 		// 정답 체크
 		if(strike === 4){
 			alert(choiceNum.join('') + ' 정답 입니다!!!\n'+ count + ' 번 만에 맞췄습니다')
@@ -47,7 +75,7 @@ baseBall.prototype.playGame = function(choiceNum){
 		}
 		
 		// 공격 횟수 체크
-		if(10-count > 0){
+		if(count < 10){
 			console.log('strike : ' + strike)
 			console.log('ball : ' + ball)
 			console.log('남은 공격 횟수 : ' + (10-count))
