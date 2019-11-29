@@ -25,18 +25,6 @@ baseBall.prototype.playGame = function(choiceNum){
 		let ball = 0;
 		let inputNum = prompt('4자리 숫자를 입력해주세요 (0~9 중복없이 입력해주세요)\nex) 1234, 4356, 9501')
 	
-		// 입력값 검사
-		if(!checkNum.test(inputNum) && inputNum !== null){
-			alert('숫자만 입력해주세요!')
-			continue
-		}else if(inputNum === null){
-			alert('게임을 종료합니다')
-			break;
-		}else if(inputNum.length > 4){
-			alert('4자리 이하로 입력해주세요')
-			continue
-		}
-
 		// 중복값 체크
 		let overlap = []
 		for(let i = 0; i < inputNum.length; i++){
@@ -52,6 +40,22 @@ baseBall.prototype.playGame = function(choiceNum){
 			breakPoint = 0
 			continue
 		}
+
+		// 입력값 검사
+		if(!checkNum.test(inputNum) && inputNum !== null){
+			alert('숫자만 입력해주세요!')
+			continue
+		}else if(inputNum.length > 4){
+			alert('4자리 이하로 입력해주세요')
+			continue
+		}else if(inputNum.length < 4){
+			alert('4자리가 아니에요 ㅠㅠ')
+			continue
+		}else if(inputNum === null){
+			alert('게임을 종료합니다')
+			break;
+		}
+
 		let inputList = inputNum.split('').map(Number)
 		count++
 
