@@ -65,6 +65,7 @@ console.log(indices)
 
 
 /* sort */
+// sort(function(이전 값, 다음 값) { 조건 })
 // 배열의 요소를 적절한 위치에 정렬하고 배열을 반환
 // 아스키 코드로 정렬 하기 때문에 1, 2, 10 이 있으면 1, 10, 2 순으로 정렬하기 때문에 비교함수를 써야함
 var items = [10, 30, 2, 20];
@@ -87,14 +88,72 @@ names.sort(function(a, b){
 })
 console.log(names); // ['Einstein', 'Kittie', 'Sally', 'John']
 
-// 배열 추가 제거 메소드들
-/*
+
+/* map(function(값, index) { 조건 }), 
+forEach(function(값, index) { 조건 }) */
+//map은 바뀐 새배열을 반환함
+var array = [1,2,3];
+array.map(function(x){
+  return x+1;
+}); // [2,3,4]
+
+// map + arrow 활용
+array.map(x => x+1) // [2,3,4] ,위랑 같음
+
+array.forEach(function(x, i) {
+  alert(x + ':' + i);
+}); // 1:0, 2:1, 3:2
+
+
+/* reduce(function(이전값, 현재) { 조건 }) */
+// .reduceRight - 오른쪽 부터 계산
+var array = [1, 2, 3, 4, 5];
+array.reduce(function(prev, cur) {
+  return prev + cur;
+}); // 15
+
+// reduce + arrow 활용
+array.reduce((prev, cur) => prev+cur) // 15
+
+
+/* filter(function(항목) { 조건 }) */
+// 특정 조건에 해당하는 배열만을 filter해서 새 배열 생성
+var array = [1,2,3,4,5];
+array.filter(function(x) {
+  return x % 2 === 0;
+}); // [2,4]
+
+//filter + arrow 활용
+array.filter(x => x % 2 === 0) // [2,4]
+
+
+/* every(function(항목) { 조건 }),
+.some(function(항목) { 조건 }) */
+// every는 모든 항목이 조건을 만족하면 true,
+// some은 하나라도 만족하면 true
+var array = [1, 3, 5, 7, 9];
+array.every(function(i) {
+  return i % 2 === 1;
+}); // true
+array.every(function(i) {
+  return i < 9;
+}); // false
+array.some(function(i) {
+  return i === 9;
+}); // true
+
+
+/* Array.isArray() 배열인지 체크 */
+Array.isArray([1,2,3]) // true
+
+
+/* 나머지 배열 메소드들 */
 array.shift();  // 첫 번째 요소를 제거하고, 제거된 요소를 반환
-array.unshift();  // 첫번째 원소 추가하고 추가된 요소를 반환
+array.unshift();  // 첫번째 원소 추가하고 length를 반환
 array.pop();  // 마지막 요소를 제거하고, 제거된 요소를 반환
-array.push(); // 마지막 요소를 추가하고 추가된 요소를 반환
-array.join('연결 되는걸 적을 수 있음');   // 배열의 모든 원소를 문자열로 변환하고 연결(+)한 결과 반환 (기본값 ,)
-*/
+array.push(); // 마지막 요소를 추가하고 length를 반환
+array.reverse(); // 배열을 뒤집음
+array.join('연결 되는걸 적을 수 있음');  // 배열의 모든 원소를 문자열로 변환하고 연결(+)한 결과 반환 (기본값 ,)
 
 // 배열을 합치고 싶을때는 apply를 활용 해야함
 // 그냥 vegetables.push(moreVegs) 할 경우 ['당근', '감자', ['셀러리', '홍당무']] 로 들어감
