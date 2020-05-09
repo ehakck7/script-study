@@ -26,4 +26,4 @@ Math.min(1,2,3,4,5) // 1
 
 // apply 활용
 var num = [1,2,3,4,5]
-console.log(Math.max.apply(this, num)) // apply을 활요해서 배열에서도 사용 가능
+console.log(Math.max.apply(this, num)) // apply을 활용해서 배열에서도 사용 가능
