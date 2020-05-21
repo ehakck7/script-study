@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>title</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="css/chat.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		.btn-more.close i:after{
+			content: "";
+			background: url(//s3.ap-northeast-2.amazonaws.com/st.dev.dangidata/static_conects/public/img/sprite/sprite.svg#icon_footer-up-grey) no-repeat 50%;
+			background-size: 300%;
+		}
+		.message-box.hide{display: none;}
+	</style>
+</head>
+<body>
+<div class="Layout_container-fluid">
+	<div class="Layout_CC Page_Chat">
+		<div class="Layout_conts">
+			<div class="Chat_wrap `+fileAttach+`" data-chat-type="qna">
+				<div class="Chat_room-name">
+					<a href="#" class="btn-prev"><img src="${CONECTS_HOST}/public/img/sprite/sprite.svg#btn_back"
+							alt="뒤로가기"></a>
+					<h4 class="tit-chat">Q&amp;A</h4>
+					<div class="util-box">
+						<button type="button"><img src="${CONECTS_HOST}/public/img/sprite/sprite.svg#icon_share"
+								alt="공유하기"></button>
+						<button type="button"><img src="${CONECTS_HOST}/public/img/sprite/sprite.svg#btn_bookmark"
+								alt="북마크"></button>
+					</div>
+				</div>
+				<div class="Chat_message-area">
+					<div class="message-box">
+						<p class="center-align">여러분의 대화를 통해 500만명의<br>다른 친구들도 함께 도움을 받습니다.</p>
+					</div>
+					<div class="message-box">
+						<p>김소현 님이 보낸 답변입니다.</p>
+					</div>
+					<div class="message-box">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p class="ai-auto-script">
+									<strong class="txt-guide">AI 자동 생성 스크립트 입니다.<br>100% 정확하지 않을 수 있습니다.</strong>
+									<span>답변자의 15초 영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이
+										표출됩니다.</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box" data-message-type="oneself">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p>
+									<span>답변자의 15초 영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.<br>
+										111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111답변자의
+										15초 영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다. 답변자의 15초
+										영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의
+										음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의 음성이
+										텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의 음성이 텍스트로
+										변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box" data-message-type="oneself">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p class="ai-auto-script">
+									<strong class="txt-guide">AI 자동 생성 스크립트 입니다.<br>100% 정확하지 않을 수 있습니다.</strong>
+									<span>답변자의 15초 영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.<br>
+										111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111답변자의
+										15초 영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다. 답변자의 15초
+										영상의 음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의
+										음성이 텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의 음성이
+										텍스트로 변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.답변자의 15초 영상의 음성이 텍스트로
+										변환되어 표출되는 영역입니다. 텍스트가 12줄이 초과되면 하단에 전체보기가 버튼이 표출됩니다.</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box" data-message-type="oneself">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p class="ai-auto-script">
+									<strong class="txt-guide">AI 자동 생성 스크립트 입니다.<br>100% 정확하지 않을 수 있습니다.</strong>
+									<span>보였다 안보였다 해야 합니다</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box" data-message-type="oneself">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p class="ai-auto-script">
+									<strong class="txt-guide">AI 자동 생성 스크립트 입니다.<br>100% 정확하지 않을 수 있습니다.</strong>
+									<span>보였다 안보였다 해야 합니다</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+					<div class="message-box" data-message-type="oneself">
+						<div class="user-info">
+							<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+							<span class="name">박상민</span>
+						</div>
+						<div class="message-data">
+							<div class="message-bubble">
+								<p class="ai-auto-script">
+									<strong class="txt-guide">AI 자동 생성 스크립트 입니다.<br>100% 정확하지 않을 수 있습니다.</strong>
+									<span>보였다 안보였다 해야 합니다</span>
+								</p>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+									<a href="javascript:void(0)" class="btn-message-more">전체보기</a>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-more-box">
+					<a href="javascript:void(0);" class="btn-more">더보기<i></i></a>
+				</div>
+			</div>
+			<div class="Qna_comment-wrap">
+				<div class="Chat_star-grade">
+					<p>최고의 답변! 감사합니다.</p>
+				</div>
+				<p class="txt-comment-notice">1:1 질문이 종료 되었습니다.<br>궁금한 점이 추가로 있다면 자유롭게 이야기 해보세요.</p>
+				<div class="Chat_reply-area">
+					<h4 class="tit-reply">댓글(23)</h4>
+					<div class="Chat_reply-box">
+						<div class="Comment_qna_reply">
+							<div class="user-info">
+								<span class="thumb"><img src="https://placehold.it/350x200" alt=""></span>
+								<span class="name">박상민</span>
+							</div>
+							<div class="message-bubble">
+								<p>안녕하세요<br>커넥츠 과외마스터 박상민입니다.<br>궁금하신 점이 있으시면 무엇이든 질문해주세요!</p>
+								<div class="comment-img">
+									<img src="http://placehold.it/150x150" />
+								</div>
+								<div class="message-util">
+									<button type="button" class="btn-likes ${value}">
+										<span class="lbl">좋아요</span> 2,345
+									</button>
+								</div>
+								<span class="time">12:21 PM</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	function messageBox(){
+		const M_NUM = $('.Chat_message-area .message-box').length
+		for(let i = 1; i <= M_NUM; i++){
+			if(i > 5){
+				$('.Chat_message-area .message-box').eq(i-1).addClass('hide')
+			}
+		}
+		this.messageBtn(M_NUM)
+	}
+	messageBox.prototype.messageBtn = function(NUM){
+		if(NUM > 5){
+			$('.btn-more-box').show()
+		}else{
+			$('.btn-more-box').hide()
+		}
+	}
+	messageBox.prototype.messageAction = function(_this){
+		if(!$(_this).hasClass('close')){
+			$(_this).addClass('close')
+			$(_this).text('접기').append('<i></i>')
+			$('.Chat_message-area .message-box').removeClass('hide')
+		}else{
+			$(_this).removeClass('close')
+			$(_this).text('더보기').append('<i></i>')
+			this.messageChk()
+		}
+	}
+	messageBox.prototype.messageChk = function(){
+		for(let i = 1; i <= $('.Chat_message-area .message-box').length; i++){
+			if(i > 5){
+				$('.Chat_message-area .message-box').eq(i-1).addClass('hide')
+			}
+		}
+	}
+	var message = new messageBox
+
+	$('.btn-more-box .btn-more').click(function(){
+		message.messageAction(this)
+	})
+
+})
+</script>
+</body>
+</html>

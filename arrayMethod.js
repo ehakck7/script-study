@@ -118,6 +118,7 @@ array.reduce((prev, cur) => prev+cur) // 15
 
 /* filter(function(항목) { 조건 }) */
 // 특정 조건에 해당하는 배열만을 filter해서 새 배열 생성
+// filter(item,index, array -> 배열은 호출한 변수가 array가 됨)
 var array = [1,2,3,4,5];
 array.filter(function(x) {
   return x % 2 === 0;
